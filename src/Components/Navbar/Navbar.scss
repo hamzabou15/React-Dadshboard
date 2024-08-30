@@ -1,0 +1,75 @@
+@import "../../styles/variables.scss";
+@import '../../styles/Responsive.scss';
+.navbar {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Inter" , sans-serif;
+    color: $main-color;
+    .logo {
+        width: auto;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        display: none;
+        img {
+            width: 50px;
+            object-fit: contain;
+        }
+        span{
+            color: $main-color;
+            font-weight: 600;
+            font-size: 16px;
+        }
+    }
+    .icons {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+        @include sm {
+            gap: 13px;
+        }
+        .icon {
+            @include sm {
+                display: none;
+            }
+        }
+        img {
+            cursor: pointer;
+        }
+        .user {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            span {
+                font-size: 16px;
+                font-weight: 500;
+            }
+        }
+        .notifications {
+            position: relative;
+            span {
+                position: absolute;
+                top: -8px;
+                right: -3px;
+                border-radius: 50%;
+                padding: 7px;
+                background-color: red;
+                font-size: 11px;
+                width: 15Px;
+                height: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}

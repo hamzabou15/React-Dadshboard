@@ -1,0 +1,76 @@
+@import "../../../styles/variables.scss";
+@import '../../../styles/Responsive.scss';
+.top_box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    h1 {
+        margin: 0px;
+        padding: 0px;
+        @include sm {
+            font-size: 26px;
+        }
+    }
+    .viewAll {
+        font-size: 18px;
+        text-decoration: underline;
+        color: $links;
+        margin: auto;
+        cursor: pointer;
+    }
+    .viewAll:hover {
+        transition: 0.3s ease;
+        color: rgb(68, 110, 202);
+    }
+    .listItems {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @include sm {
+            gap: 13px;
+        }
+
+        .items {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .amount {
+                font-size: 15px;
+                font-weight: 700;
+            }
+            .user {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                .image_container {
+                    width: 40px;
+                    height: 40px;
+                    overflow: hidden;
+                    border-radius: 50%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                          object-fit: cover;
+
+                    }
+                }
+                .userText{
+                    display: flex;
+                    flex-direction: column;
+                    .userName {
+                        font-size: 15px;
+                        font-weight: 500;
+                        letter-spacing: 0.3px;
+                    }
+                    .email {
+                        font-size: 11px;
+                        color: rgb(215, 215, 215);
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+
+}

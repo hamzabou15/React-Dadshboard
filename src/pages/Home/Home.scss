@@ -1,0 +1,49 @@
+@import '../../styles/variables.scss';
+@import '../../styles/Responsive.scss';
+
+.home_page {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-auto-rows: minmax(180px , auto);
+    overflow: hidden;
+    @include xl{
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @include lg{
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @include md {
+        grid-template-columns:auto;
+      }
+      @include sm { 
+        display: flex;
+        flex-direction: column;
+        
+      }
+    
+    .box {
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid $soft-bg;
+        @include sm {
+            padding: 15px;
+        }
+        //  background-color: rgba(173 ,216 , 230 , 0.6 );
+    }
+    .box1 {
+        grid-column: 1 span;
+        grid-row: 3 span;
+    }
+    .box4 {
+        grid-column: span 1;
+        grid-row: span 3;
+    }
+    .box7 {
+        grid-column: span 2;
+        grid-row: span 2;
+        @include sm {
+            display: none;
+        }
+    }
+}

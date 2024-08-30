@@ -1,0 +1,54 @@
+@import "../../../styles/Responsive.scss";
+.Chart_source {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    h1 {
+        @include sm {
+            font-size: 27px;
+        }
+    }
+    .options {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 20px;
+        // align-items: center;
+        @include sm {
+            grid-auto-rows: minmax(2fr, auto);
+          }
+        // justify-content: space-between;
+        .option {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+            span {
+                font-size: 13px;
+            }
+            .title {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+           
+                .circle {
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                }
+                span {
+                    font-size: 13px;
+                }
+            }
+          
+        }
+    }
+}
+
+@media screen and (max-width:1280px) {
+   .Chart_source .options {
+        grid-template-columns: auto auto;
+
+    }
+    
+}

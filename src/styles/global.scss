@@ -1,3 +1,7 @@
+@import "./variables.scss";
+@import './Responsive.scss';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -7,4 +11,87 @@
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.main {
+  font-family: 'Nunito', sans-serif;
+    background-color: $main-bg;
+  color: white;
+  min-height: 100vh;
+  height: 100%;
+    padding-bottom: 50px;
+    position: relative;
+}
+
+.container {
+
+  display: flex;
+  margin-bottom: 50px;
+  @include lg {
+    margin-bottom: 70px;
+  }
+  @include sm {
+    margin-bottom: 100px;
+
+  }
+
+}
+
+.menuContainer {
+  width: 250px;
+  padding: 5px 20px;
+  border-right: 2px solid #384256;
+  background: linear-gradient(to bottom, #384256, #5c7d97);
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+    @include lg{
+      width: max-content;
+  }  
+  @include sm{
+    padding: 5px 10px;
+}
+}
+
+.navbar {
+  width: calc(100% - 250px);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  // background-color: #2f485e;
+  margin-left: auto;
+
+}
+
+.contentContainer {
+  padding: 5px 20px;
+  width: calc(100vw - 270px);
+  margin-left: auto;
+  @include lg {
+    width: calc(100% - 80px);
+  }
+  @include sm{
+      padding: 5px 10px;
+      width: calc(100% - 60px);
+  }
+
+
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1720px) {
+  .contentContainer {
+    width: calc(100vw - 270px);
+
+  }
+  
+}
+
+@media screen and (max-width: 1024px) and (min-width:769px){
+  .contentContainer {
+    width: calc(100vw - 80px);
+
+  }
+  
 }
